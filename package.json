@@ -6,12 +6,15 @@
   "license": "MIT",
   "scripts": {
     "build": "NODE_OPTIONS=--experimental-specifier-resolution=node tsc",
+    "test": "NODE_OPTIONS=--experimental-specifier-resolution=node jest --passWithNoTests",
     "build:my-example": "NODE_OPTIONS=\"--enable-source-maps --experimental-import-meta-resolve --experimental-json-modules --abort-on-uncaught-exception --experimental-specifier-resolution=node\" tsc",
     "check": "NODE_OPTIONS=--experimental-specifier-resolution=node node -c .",
+    "test:my-example": "NODE_OPTIONS=\"--enable-source-maps --experimental-import-meta-resolve --experimental-json-modules --abort-on-uncaught-exception --experimental-specifier-resolution=node\" jest --passWithNoTests",
     "check:my-example": "NODE_OPTIONS=\"--enable-source-maps --experimental-import-meta-resolve --experimental-json-modules --abort-on-uncaught-exception --experimental-specifier-resolution=node\" node -c ."
   },
   "devDependencies": {
     "@types/node": "15.6.1",
+    "jest": "27.0.3",
     "typescript": "4.3.2"
   },
   "dependencies": {
